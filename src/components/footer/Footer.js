@@ -1,5 +1,6 @@
 import React from "react";
 import "./css/footer.css";
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -39,6 +40,10 @@ const Footer = () => {
           >
             Contribute
           </a>
+        </li>
+
+        <li>
+          <Link to="/">Home</Link>
         </li>
       </ul>
     </footer>

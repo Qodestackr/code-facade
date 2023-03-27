@@ -1,0 +1,125 @@
+#home {
+    background-color: #021049;
+    color: white;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.items-start {
+    align-items: flex-start;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-8 {
+    margin-bottom: 2rem;
+}
+
+.leading-relaxed {
+    line-height: 1.75;
+}
+
+.flex {
+    display: flex;
+}
+
+.space-x-4> :not(:last-child) {
+    margin-right: 1rem;
+}
+
+.py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.text-black {
+    color: black;
+}
+
+.rounded-md {
+    border-radius: 0.375rem;
+}
+
+[class*="hover:bg-[#FE6B7E]"]:hover {
+    background-color: #FE6B7E;
+}
+
+.hover:text-white:hover {
+    color: white;
+}
+
+.w-5 {
+    width: 1.25rem;
+}
+
+.h-5 {
+    height: 1.25rem;
+}
+
+.ml-1 {
+    margin-left: 0.25rem;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+}
+
+.splitz {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 80vw;
+    margin: 0 auto;
+}

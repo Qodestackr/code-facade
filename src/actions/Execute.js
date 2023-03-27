@@ -1,6 +1,6 @@
 import axios from "axios"
 import { RUN_CODE_SUCCESS, RUN_CODE_FAILED, RUN_CODE_RUNNING } from "./types"
-var server = "https://remo-core.onrender.com"; // production URL || LOCALHOST
+var server = "http://localhost:6500" //"https://remo-core.onrender.com"; // production URL || LOCALHOST
 
 const addr = () => {
   // if (!process.env.NODE_ENV || process.env.NODE_ENV === "development") {
