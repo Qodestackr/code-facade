@@ -12,7 +12,7 @@ import playGrayIcon from '../../media/icon-play-light-gray.png';
 
 import octoGray from '../../media/icon-octocat-gray.png';
 
-const languages = ['javascript', 'python'];
+const languages = ['javascript', 'typescript', 'python'];
 const themes = ["dracula", "monokai"];
 const tabSizes = [2, 4, 8];
 const fontSizes = [12, 14, 16, 18, 20, 22, 24, 28, 30, 32];
@@ -148,7 +148,7 @@ function Execute(props) {
   }, [props.runCodeLoading]);
 
   return (
-    <Fragment>
+    <section className=''>
       <header>
         <div className="header-intro">
           <a
@@ -275,7 +275,7 @@ function Execute(props) {
         />
         <div className="code-results">
           <AceEditor
-            placeholder="Output will be shown here."
+            placeholder="Code output will be shown here."
             mode="text"
             theme={theme}
             name="code-results"
@@ -296,7 +296,7 @@ function Execute(props) {
           color="var(--editer-light-gray)"
         ></AtomSpinner>
       </div>
-    </Fragment>
+    </section>
   );
 }
 

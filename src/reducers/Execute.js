@@ -4,40 +4,30 @@ import {
   RUN_CODE_RUNNING,
 } from "../actions/types";
 
-const initialState = {
+import {
+  codeDefault,
+  codeSuccess,
+  codeRunning,
+  codeFailed,
+} from './code-state'
+
+const INITIAL_STATE = {
   output: null,
   runCodeLoading: false,
   runCodeFail: false,
   runCodeOk: false,
 };
 
-export default function (state = initialState, action) {
+export default function rootReducer (state = INITIAL_STATE || null, action) {
   switch (action.type) {
     case RUN_CODE_SUCCESS:
-      return {
-        ...state,
-        output: action.payload,
-        runCodeLoading: false,
-        runCodeFail: false,
-        runCodeOk: true,
-      };
+      return codeSuccess({...state, action})
     case RUN_CODE_RUNNING:
-      return {
-        ...state,
-        output: null,
-        runCodeLoading: true,
-        runCodeFail: false,
-        runCodeOk: false,
-      };
+      return codeRunning({...state, action})
     case RUN_CODE_FAILED:
-      return {
-        ...state,
-        output: null,
-        runCodeLoading: false,
-        runCodeFail: true,
-        runCodeOk: false,
-      };
+      return codeFailed({...state, action})
+
     default:
-      return state;
+      return codeDefault(INITIAL_STATE)
   }
 }
