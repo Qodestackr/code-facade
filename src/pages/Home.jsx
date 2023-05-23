@@ -1,6 +1,7 @@
 import React from 'react'
 // import HeroSection from '../layouts/HeroSection' //! deprecated 
 // import HeaderNav from '../layouts/Nav' //!deprecated
+import { Link } from 'react-router-dom'
 
 export default function Home() {
     return (
@@ -16,7 +17,7 @@ export default function Home() {
         </p>
         </div>
         <div className="flex gap-3 mt-4">
-            <button className="bg-green-300 text-white rounded-xl px-3 py-4">START CODING</button>
+            <button className="bg-green-300 text-white rounded-xl px-3 py-4"><Link to='/exec'>START CODING</Link></button>
             <button className="bg-blue-400 text-white rounded-xl px-3 py-4">START LEARNING</button>
         </div>
     </main>
