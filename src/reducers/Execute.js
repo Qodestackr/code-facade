@@ -21,11 +21,11 @@ const INITIAL_STATE = {
 export default function rootReducer (state = INITIAL_STATE || null, action) {
   switch (action.type) {
     case RUN_CODE_SUCCESS:
-      return codeSuccess({...state, action})
+      return codeSuccess(state, action)
     case RUN_CODE_RUNNING:
-      return codeRunning({...state, action})
+      return codeRunning(state, action)
     case RUN_CODE_FAILED:
-      return codeFailed({...state, action})
+      return codeFailed(state, action)
 
     default:
       return codeDefault(INITIAL_STATE)
